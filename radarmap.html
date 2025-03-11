@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="https://js.radar.com/v4.4.3/radar.css" rel="stylesheet">
+    <script src="https://js.radar.com/v4.4.3/radar.min.js"></script>
+  </head>
+
+  <body>
+    <div id="map" style="width: 100%; height: 100%;" />
+
+    <script type="text/javascript">
+      Radar.initialize('prj_test_pk_07a1c8bfeec96a0094104f36e6b445a762732b0f');
+
+      // create a new map
+      const map = Radar.ui.map({
+        container: 'map',
+        style: 'radar-default-v1',
+        // omit center and zoom to use default IP address location
+        center: [-73.99110,40.73430],
+        zoom: 11,
+      });
+
+      // create marker and add to map
+      const marker = Radar.ui.marker({ color: '#000257' })
+        .setLngLat([-73.99110,40.73430])
+        .addTo(map);
+    </script>
+  </body>
+</html>
